@@ -29,15 +29,15 @@ POST http://localhost:3000/api/like/12
 
 ###
 // 7. unlike the post
-POST http://localhost:3000/api/unlike/13
+POST http://localhost:3000/api/unlike/12
 
 ###
 // 8. comment
-POST http://localhost:3000/api/comment/14
+POST http://localhost:3000/api/comment/15
 Content-Type: application/json
 
 {
-    "comment": "visit today!"
+    "comment": "oregon very cool "
 }
 
 ###
@@ -47,3 +47,13 @@ GET http://localhost:3000/api/posts/14
 ###
 // 10. all posts
 GET http://localhost:3000/api/all_posts/
+
+###
+// 11. login
+POST http://localhost:3000/api/authenticate
+Content-Type: application/json
+
+{
+    "email": "pim@smiling.com",
+    "password": "pim"
+}

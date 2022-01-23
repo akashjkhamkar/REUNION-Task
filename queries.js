@@ -1,6 +1,5 @@
 const Pool = require('pg').Pool;
 const bcrypt = require('bcrypt');
-const saltRounds = 2;
 
 const pool = new Pool({
     user: 'akash',
@@ -9,6 +8,16 @@ const pool = new Pool({
     password: 'password',
     port: 5432,
 })
+
+// const admin = {
+//     name: 'admin',
+//     email: 'admin@admin.com',
+//     password: 'admin'
+// }
+
+// // bcrypt.hash(admin.name, 1).then((hash) => {
+// //     pool.query(`INSERT INTO users(name, email, password) VALUES ($1, $2, $3);`, [admin.name, admin.email, hash]);
+// // })
 
 const getUser = async (userid) => {
     return pool.query(
@@ -192,6 +201,38 @@ const getAllPosts = (userid) => {
         })
 }
 
+const authenticateUser = (user) => {
+    if(!user.email || !user.password){
+        console.log("invalid input")
+        return {'Message': 'Email or Password is not provided'};
+    } else if(typeof user.password !== 'string' && typeof user.email !== 'string'){
+        return {'Message': 'Email and Password should both be string'};
+    }
+
+    let userProfile;
+
+    return pool.query(`SELECT name, id, password FROM users WHERE email = $1;`, [user.email])
+    .then((results) => {
+        if(results.rowCount === 0){
+            return false;
+        }
+
+        userProfile = results.rows[0];
+        return bcrypt.compare(user.password, userProfile.password)})
+    .then(verified => {
+        console.log(verified)
+        if(verified){
+            return { id: userProfile.id, name: userProfile.name };
+        }
+        
+        console.log('Password did not match', verified)
+        return false;
+    })
+    .catch(e => {
+        console.log('Bcrypt Error: ', e);
+    });
+}
+
 module.exports = {
     followUser,
     unfollowUser,
@@ -202,5 +243,6 @@ module.exports = {
     unlikePost,
     comment,
     getPost,
-    getAllPosts
+    getAllPosts,
+    authenticateUser
 }

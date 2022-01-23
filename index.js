@@ -1,9 +1,10 @@
 const express = require('express');
+const jwt = require('jsonwebtoken');
 const bodyParser = require('body-parser');
 const app = express();
 
 const { getPost, followUser, unfollowUser, getUser, addPost, 
-  deletePost, likePost, unlikePost, comment, getAllPosts } = require('./queries.js')
+  deletePost, likePost, unlikePost, comment, getAllPosts, authenticateUser } = require('./queries.js')
 
 app.use(bodyParser.json());
 app.use(
@@ -12,10 +13,21 @@ app.use(
   })
 );
 
-const USERID = 8;
+const USERID = 10;
 
 app.get('/', async (req, res) => {
   res.json({'Message': 'Hii! This is Akash', 'App': 'This API was created as an submission to the REUNONS internship task'});
+})
+
+app.post('/api/authenticate', async (req, res) => {
+  const user = req.body;
+  const result = await authenticateUser(user);
+
+  if(!result){
+    return res.json({'Message': 'Email or Password is wrong'});
+  }
+
+  res.send("You are authenticated, " + result.name);
 })
 
 app.get('/api/user', async (req, res) => {
