@@ -9,16 +9,6 @@ const pool = new Pool({
     port: 5432,
 })
 
-// const admin = {
-//     name: 'admin',
-//     email: 'admin@admin.com',
-//     password: 'admin'
-// }
-
-// // bcrypt.hash(admin.name, 1).then((hash) => {
-// //     pool.query(`INSERT INTO users(name, email, password) VALUES ($1, $2, $3);`, [admin.name, admin.email, hash]);
-// // })
-
 const getUser = async (userid) => {
     return pool.query(
     `select users.name, count(followers.followerid) as followers,
@@ -171,7 +161,6 @@ const getPost = (postid) => {
 }
 
 const commentsParser = (posts) => {
-    console.log(posts);
     return posts.map(post => {
         if(post.comments){
             post.comments = post.comments.split('\n');
@@ -191,7 +180,6 @@ const getAllPosts = (userid) => {
         WHERE posts.userid = $1
         GROUP BY posts.id;`, [userid])
         .then(results => {
-            console.log(results)
             const posts = commentsParser(results.rows);
             return posts;
         })
@@ -203,7 +191,6 @@ const getAllPosts = (userid) => {
 
 const authenticateUser = (user) => {
     if(!user.email || !user.password){
-        console.log("invalid input")
         return {'Message': 'Email or Password is not provided'};
     } else if(typeof user.password !== 'string' && typeof user.email !== 'string'){
         return {'Message': 'Email and Password should both be string'};
@@ -220,12 +207,10 @@ const authenticateUser = (user) => {
         userProfile = results.rows[0];
         return bcrypt.compare(user.password, userProfile.password)})
     .then(verified => {
-        console.log(verified)
         if(verified){
             return { id: userProfile.id, name: userProfile.name };
         }
         
-        console.log('Password did not match', verified)
         return false;
     })
     .catch(e => {

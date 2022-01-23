@@ -26,15 +26,18 @@ DELETE http://localhost:3000/api/posts/13
 ###
 // 6. like the post
 POST http://localhost:3000/api/like/12
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwibmFtZSI6InBpbSIsImlhdCI6MTY0MjkzODk2MywiZXhwIjoxNjQyOTQyNTYzfQ.YGP2kWz9hVJiIGkoWYbNzkLPI8s11CR1KPvGolROp5o
 
 ###
 // 7. unlike the post
 POST http://localhost:3000/api/unlike/12
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwibmFtZSI6InBpbSIsImlhdCI6MTY0MjkzODk2MywiZXhwIjoxNjQyOTQyNTYzfQ.YGP2kWz9hVJiIGkoWYbNzkLPI8s11CR1KPvGolROp5o
 
 ###
 // 8. comment
 POST http://localhost:3000/api/comment/15
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwibmFtZSI6InBpbSIsImlhdCI6MTY0MjkzODk2MywiZXhwIjoxNjQyOTQyNTYzfQ.YGP2kWz9hVJiIGkoWYbNzkLPI8s11CR1KPvGolROp5o
 
 {
     "comment": "oregon very cool "
@@ -43,10 +46,12 @@ Content-Type: application/json
 ###
 // 9. get a post
 GET http://localhost:3000/api/posts/14
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwibmFtZSI6InBpbSIsImlhdCI6MTY0MjkzODk2MywiZXhwIjoxNjQyOTQyNTYzfQ.YGP2kWz9hVJiIGkoWYbNzkLPI8s11CR1KPvGolROp5o
 
 ###
 // 10. all posts
 GET http://localhost:3000/api/all_posts/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwibmFtZSI6InBpbSIsImlhdCI6MTY0MjkzODk2MywiZXhwIjoxNjQyOTQyNTYzfQ.YGP2kWz9hVJiIGkoWYbNzkLPI8s11CR1KPvGolROp5o
 
 ###
 // 11. login
