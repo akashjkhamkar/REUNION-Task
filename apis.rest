@@ -56,7 +56,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwibmFtZSI6I
 ###
 // 10. all posts
 GET https://reunion-backend-task-akash.herokuapp.com/api/all_posts/
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwibmFtZSI6Impha2UiLCJpYXQiOjE2NDI5NTEwMTQsImV4cCI6MTY0Mjk1NDYxNH0.dYCWV_ZJ1hE4R_vpCWjYyBoHl2VwYDOImi4ViJD2w08
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTMsIm5hbWUiOiJhZG1pbiIsImlhdCI6MTY0Mjk1MTA3OCwiZXhwIjoxNjQyOTU0Njc4fQ.N6wOjdJ3R84FvNHaHD_dQUBhfpSMTcynLz3809IlqVk
 
 ###
 // 11. login
@@ -64,8 +64,8 @@ POST http://localhost:3000/api/authenticate
 Content-Type: application/json
 
 {
-    "email": "admin@admin.com",
-    "password": "admin"
+    "email": "jake@adventure.com",
+    "password": "jake"
 }
 
 ###
