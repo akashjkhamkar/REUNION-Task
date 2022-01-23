@@ -1,13 +1,23 @@
 const Pool = require('pg').Pool;
 const bcrypt = require('bcrypt');
 
+const connectionString = process.env.DATABASE_URL;
+
 const pool = new Pool({
-    user: 'akash',
-    host: 'localhost',
-    database: 'reunion',
-    password: 'password',
-    port: 5432,
+    connectionString,
+    ssl: {
+        rejectUnauthorized: false
+    }
 })
+
+// const pool = new Pool({
+//     user: 'akash',
+//     host: 'localhost',
+//     database: 'reunion',
+//     password: 'password',
+//     port: 5432,
+// })
+
 
 // This file contains functions which are used to perform operations on the db
 

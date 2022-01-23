@@ -51,7 +51,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwibmFtZSI6I
 ###
 // 9. get a post
 GET http://localhost:3000/api/posts/22
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwibmFtZSI6InBpbSIsImlhdCI6MTY0Mjk0NjAwMywiZXhwIjoxNjQyOTQ5NjAzfQ.pXE7JXpRFlMiQ_ZnwBL_vZ9KAzW68OE-9BffH_pUbEQ
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwibmFtZSI6Impha2UiLCJpYXQiOjE2NDI5NTA2MzUsImV4cCI6MTY0Mjk1NDIzNX0.iUZVO8pXvptt4O8aa_Een5xHEJhB1Zk6EmP8jIma7KE
 
 ###
 // 10. all posts
