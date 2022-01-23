@@ -1,20 +1,24 @@
+// use the rest extension by the vscode 
+// access tokens have expired, login using the last request handler
+
+
 // 1. follow
-POST http://localhost:3000/api/follow/13
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwibmFtZSI6Impha2UiLCJpYXQiOjE2NDI5NDc0NDQsImV4cCI6MTY0Mjk1MTA0NH0.O7xS9ZSufmJTbRpyOB6enNPaS0PiRJlEhfBwpbZrUIA
+POST https://reunion-backend-task-akash.herokuapp.com/api/follow/13
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwibmFtZSI6Impha2UiLCJpYXQiOjE2NDI5NTYwOTUsImV4cCI6MTY0Mjk1OTY5NX0.5ybHMFu6N2BB5ZHemb4McHpL2yysfeXA932qiss8C0c
 
 ###
 // 2. unfollow
-POST http://localhost:3000/api/unfollow/10
+POST https://reunion-backend-task-akash.herokuapp.com/api/unfollow/10
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwibmFtZSI6Impha2UiLCJpYXQiOjE2NDI5NDc0NDQsImV4cCI6MTY0Mjk1MTA0NH0.O7xS9ZSufmJTbRpyOB6enNPaS0PiRJlEhfBwpbZrUIA
 
 ###
 // 3. user info
-GET http://localhost:3000/api/user
+GET https://reunion-backend-task-akash.herokuapp.com/api/user
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwibmFtZSI6Impha2UiLCJpYXQiOjE2NDI5NDc0NDQsImV4cCI6MTY0Mjk1MTA0NH0.O7xS9ZSufmJTbRpyOB6enNPaS0PiRJlEhfBwpbZrUIA
 
 ###
 // 4. post a post
-POST http://localhost:3000/api/posts
+POST https://reunion-backend-task-akash.herokuapp.com/api/posts
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTMsIm5hbWUiOiJhZG1pbiIsImlhdCI6MTY0Mjk0NjcyMywiZXhwIjoxNjQyOTUwMzIzfQ.O-UjC1PJhot4yk3Bm3xhQSM1ndUyt_GPWUslDrU9mTU
 
@@ -25,22 +29,22 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTMsIm5hbWUiO
 
 ###
 // 5. deleting a post
-DELETE http://localhost:3000/api/posts/22
+DELETE https://reunion-backend-task-akash.herokuapp.com/api/posts/22
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwibmFtZSI6Impha2UiLCJpYXQiOjE2NDI5NDc0NDQsImV4cCI6MTY0Mjk1MTA0NH0.O7xS9ZSufmJTbRpyOB6enNPaS0PiRJlEhfBwpbZrUIA
 
 ###
 // 6. like the post
-POST http://localhost:3000/api/like/22
+POST https://reunion-backend-task-akash.herokuapp.com/api/like/22
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTMsIm5hbWUiOiJhZG1pbiIsImlhdCI6MTY0Mjk0NjcyMywiZXhwIjoxNjQyOTUwMzIzfQ.O-UjC1PJhot4yk3Bm3xhQSM1ndUyt_GPWUslDrU9mTU
 
 ###
 // 7. unlike the post
-POST http://localhost:3000/api/unlike/12
+POST https://reunion-backend-task-akash.herokuapp.com/api/unlike/12
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwibmFtZSI6InBpbSIsImlhdCI6MTY0MjkzODk2MywiZXhwIjoxNjQyOTQyNTYzfQ.YGP2kWz9hVJiIGkoWYbNzkLPI8s11CR1KPvGolROp5o
 
 ###
 // 8. comment
-POST http://localhost:3000/api/comment/22
+POST https://reunion-backend-task-akash.herokuapp.com/api/comment/22
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwibmFtZSI6InBpbSIsImlhdCI6MTY0Mjk0NjAwMywiZXhwIjoxNjQyOTQ5NjAzfQ.pXE7JXpRFlMiQ_ZnwBL_vZ9KAzW68OE-9BffH_pUbEQ
 
@@ -50,7 +54,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwibmFtZSI6I
 
 ###
 // 9. get a post
-GET http://localhost:3000/api/posts/22
+GET https://reunion-backend-task-akash.herokuapp.com/api/posts/22
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwibmFtZSI6Impha2UiLCJpYXQiOjE2NDI5NTA2MzUsImV4cCI6MTY0Mjk1NDIzNX0.iUZVO8pXvptt4O8aa_Een5xHEJhB1Zk6EmP8jIma7KE
 
 ###
@@ -60,7 +64,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTMsIm5hbWUiO
 
 ###
 // 11. login
-POST http://localhost:3000/api/authenticate
+POST https://reunion-backend-task-akash.herokuapp.com/api/authenticate
 Content-Type: application/json
 
 {
