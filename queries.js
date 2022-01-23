@@ -9,6 +9,8 @@ const pool = new Pool({
     port: 5432,
 })
 
+// This file contains functions which are used to perform operations on the db
+
 const getUser = async (userid) => {
     return pool.query(
     `select users.name, count(followers.followerid) as followers,
@@ -126,6 +128,10 @@ const unfollowUser = async (followingid, followerid) => {
 }
 
 const comment = async (postid, userComment, userid) => {
+    if(!userComment){
+        return { 'message': 'Enter a valid comment' }
+    }
+    
     return pool.query('INSERT INTO comments(postid, userid, comment) VALUES($1, $2, $3) RETURNING id;', [postid, userid, userComment])
     .then(results => {
         return { 'message': `Successfully added the comment on the post ${postid}`, 'Comment_id': results.rows[0] }

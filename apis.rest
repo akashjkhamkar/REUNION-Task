@@ -1,32 +1,37 @@
 // 1. follow
-POST http://localhost:3000/api/follow/10
+POST http://localhost:3000/api/follow/13
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwibmFtZSI6Impha2UiLCJpYXQiOjE2NDI5NDc0NDQsImV4cCI6MTY0Mjk1MTA0NH0.O7xS9ZSufmJTbRpyOB6enNPaS0PiRJlEhfBwpbZrUIA
 
 ###
 // 2. unfollow
 POST http://localhost:3000/api/unfollow/10
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwibmFtZSI6Impha2UiLCJpYXQiOjE2NDI5NDc0NDQsImV4cCI6MTY0Mjk1MTA0NH0.O7xS9ZSufmJTbRpyOB6enNPaS0PiRJlEhfBwpbZrUIA
 
 ###
 // 3. user info
 GET http://localhost:3000/api/user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwibmFtZSI6Impha2UiLCJpYXQiOjE2NDI5NDc0NDQsImV4cCI6MTY0Mjk1MTA0NH0.O7xS9ZSufmJTbRpyOB6enNPaS0PiRJlEhfBwpbZrUIA
 
 ###
 // 4. post a post
 POST http://localhost:3000/api/posts
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTMsIm5hbWUiOiJhZG1pbiIsImlhdCI6MTY0Mjk0NjcyMywiZXhwIjoxNjQyOTUwMzIzfQ.O-UjC1PJhot4yk3Bm3xhQSM1ndUyt_GPWUslDrU9mTU
 
 {
-    "title": "quick and easy recepies",
-    "description": "authentic kokani jewan"
+    "title": "ad-min()",
+    "description": "admin , minimizing the minimum admin , admin min min admin, stuff"
 }
 
 ###
 // 5. deleting a post
-DELETE http://localhost:3000/api/posts/13
+DELETE http://localhost:3000/api/posts/22
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwibmFtZSI6Impha2UiLCJpYXQiOjE2NDI5NDc0NDQsImV4cCI6MTY0Mjk1MTA0NH0.O7xS9ZSufmJTbRpyOB6enNPaS0PiRJlEhfBwpbZrUIA
 
 ###
 // 6. like the post
-POST http://localhost:3000/api/like/12
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwibmFtZSI6InBpbSIsImlhdCI6MTY0MjkzODk2MywiZXhwIjoxNjQyOTQyNTYzfQ.YGP2kWz9hVJiIGkoWYbNzkLPI8s11CR1KPvGolROp5o
+POST http://localhost:3000/api/like/22
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTMsIm5hbWUiOiJhZG1pbiIsImlhdCI6MTY0Mjk0NjcyMywiZXhwIjoxNjQyOTUwMzIzfQ.O-UjC1PJhot4yk3Bm3xhQSM1ndUyt_GPWUslDrU9mTU
 
 ###
 // 7. unlike the post
@@ -35,23 +40,23 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwibmFtZSI6I
 
 ###
 // 8. comment
-POST http://localhost:3000/api/comment/15
+POST http://localhost:3000/api/comment/22
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwibmFtZSI6InBpbSIsImlhdCI6MTY0MjkzODk2MywiZXhwIjoxNjQyOTQyNTYzfQ.YGP2kWz9hVJiIGkoWYbNzkLPI8s11CR1KPvGolROp5o
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwibmFtZSI6InBpbSIsImlhdCI6MTY0Mjk0NjAwMywiZXhwIjoxNjQyOTQ5NjAzfQ.pXE7JXpRFlMiQ_ZnwBL_vZ9KAzW68OE-9BffH_pUbEQ
 
 {
-    "comment": "oregon very cool "
+    "comment": "i mean really really helpful !"
 }
 
 ###
 // 9. get a post
-GET http://localhost:3000/api/posts/14
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwibmFtZSI6InBpbSIsImlhdCI6MTY0MjkzODk2MywiZXhwIjoxNjQyOTQyNTYzfQ.YGP2kWz9hVJiIGkoWYbNzkLPI8s11CR1KPvGolROp5o
+GET http://localhost:3000/api/posts/22
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwibmFtZSI6InBpbSIsImlhdCI6MTY0Mjk0NjAwMywiZXhwIjoxNjQyOTQ5NjAzfQ.pXE7JXpRFlMiQ_ZnwBL_vZ9KAzW68OE-9BffH_pUbEQ
 
 ###
 // 10. all posts
 GET http://localhost:3000/api/all_posts/
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwibmFtZSI6InBpbSIsImlhdCI6MTY0MjkzODk2MywiZXhwIjoxNjQyOTQyNTYzfQ.YGP2kWz9hVJiIGkoWYbNzkLPI8s11CR1KPvGolROp5o
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwibmFtZSI6Impha2UiLCJpYXQiOjE2NDI5NDc0NDQsImV4cCI6MTY0Mjk1MTA0NH0.O7xS9ZSufmJTbRpyOB6enNPaS0PiRJlEhfBwpbZrUIA
 
 ###
 // 11. login
@@ -59,6 +64,16 @@ POST http://localhost:3000/api/authenticate
 Content-Type: application/json
 
 {
-    "email": "pim@smiling.com",
-    "password": "pim"
+    "email": "admin@admin.com",
+    "password": "admin"
+}
+
+###
+
+POST http://localhost:3000/api/authenticate
+Content-Type: application/json
+
+{
+    "email": "jake@adventure.com",
+    "password": "jake"
 }
