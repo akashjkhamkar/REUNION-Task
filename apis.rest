@@ -55,8 +55,8 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwibmFtZSI6I
 
 ###
 // 10. all posts
-GET http://localhost:3000/api/all_posts/
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwibmFtZSI6Impha2UiLCJpYXQiOjE2NDI5NDc0NDQsImV4cCI6MTY0Mjk1MTA0NH0.O7xS9ZSufmJTbRpyOB6enNPaS0PiRJlEhfBwpbZrUIA
+GET https://reunion-backend-task-akash.herokuapp.com/api/all_posts/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwibmFtZSI6Impha2UiLCJpYXQiOjE2NDI5NTEwMTQsImV4cCI6MTY0Mjk1NDYxNH0.dYCWV_ZJ1hE4R_vpCWjYyBoHl2VwYDOImi4ViJD2w08
 
 ###
 // 11. login
@@ -70,7 +70,7 @@ Content-Type: application/json
 
 ###
 
-POST http://localhost:3000/api/authenticate
+POST https://reunion-backend-task-akash.herokuapp.com/api/authenticate
 Content-Type: application/json
 
 {
